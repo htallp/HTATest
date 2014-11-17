@@ -1,0 +1,784 @@
+::selection {background: #fdb714; /* Safari */;}
+::-moz-selection {background: #f1a900; /* Firefox */;}
+
+html, body {width: 100%;height: 100%;margin: 0;padding: 0;outline:none;}
+*,
+*:after,
+*::before {-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+
+body {color: #fff;font-family: 'Montserrat', sans-serif;font-size: 100%;overflow-x: hidden;transition:all .2s linear; 
+    -o-transition:all .2s linear; 
+    -moz-transition:all .2s linear; 
+    -webkit-transition:all .2s linear;
+	-webkit-print-color-adjust: exact;
+}
+
+@-webkit-keyframes spaceboots {
+	0% {
+		-webkit-transform: translate(2px, 1px) rotate(0deg);
+		-moz-transform: translate(2px, 1px) rotate(0deg);
+	}
+	
+	10% { 
+		-webkit-transform: translate(-1px, -2px) rotate(-1deg); 
+		-moz-transform: translate(-1px, -2px) rotate(-1deg);
+	}
+	20% { 
+		-webkit-transform: translate(-3px, 0px) rotate(1deg);
+		-moz-transform: translate(-3px, 0px) rotate(1deg);
+	}
+	30% { 
+		-webkit-transform: translate(0px, 2px) rotate(0deg); 
+		-moz-transform: translate(0px, 2px) rotate(0deg);
+	}
+	40% { 
+		-webkit-transform: translate(1px, -1px) rotate(1deg); 
+		-moz-transform: translate(1px, -1px) rotate(1deg);
+	}
+	50% { 
+		-webkit-transform: translate(-1px, 2px) rotate(-1deg); 
+		-moz-transform: translate(-1px, 2px) rotate(-1deg);
+	}
+	60% { 
+		-webkit-transform: translate(-3px, 1px) rotate(0deg); 
+		-moz-transform: translate(-3px, 1px) rotate(0deg); 
+	}
+	70% { 
+		-webkit-transform: translate(2px, 1px) rotate(-1deg);
+		-moz-transform: translate(2px, 1px) rotate(-1deg);
+	}
+	80% { 
+		-webkit-transform: translate(-1px, -1px) rotate(1deg);
+		-moz-transform: translate(-1px, -1px) rotate(1deg);
+	}
+	90% { 
+		-webkit-transform: translate(2px, 2px) rotate(0deg);
+		-moz-transform: translate(2px, 2px) rotate(0deg);
+	}
+	100% { 
+		-webkit-transform: translate(1px, -2px) rotate(-1deg);
+		-moz-transform: translate(1px, -2px) rotate(-1deg);
+	}
+}
+.shake:hover,
+.shake:focus {
+	-webkit-animation-name: spaceboots;
+	-webkit-animation-duration: 0.8s;
+	-webkit-transform-origin:50% 50%;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+	-moz-animation-name: spaceboots;
+	-moz-animation-duration: 0.8s;
+	-moz-transform-origin:50% 50%;
+	-moz-animation-iteration-count: infinite;
+	-moz-animation-timing-function: linear;
+}
+.shake {display:inline-block}
+
+a:link {color: #414042;}
+a:visited {color: #414042;}
+a:hover {color: #414042;text-decoration: underline;}
+a:active {color: #414042;}
+
+ul {list-style-type: none;padding:0;margin:0;}
+
+div#values {position: fixed;background: rgba(0,0,0,0.5);height: 100%;width: 100%;top: 0;left: 0;z-index: 9999;}
+div#values div.value img {width: 100%; max-width:480px;}
+div#values div.value img:hover {cursor:pointer;}
+
+div#values div.value {width: 28%;position: absolute;left: 50%;top: 50%;}
+
+div#values div#close {position:fixed; top:20px; right:20px;}
+div#values div#close img {width: 30px;opacity: 0.7;}
+div#values div#close img:hover {cursor:pointer;}
+
+/* Footer Links*/
+footer a:active,
+footer a:visited,
+footer a:hover,
+footer a:link {text-decoration: none;}
+
+h1,h2,h3 {margin:0;padding:0;}
+hr {font-size: 49pt;height:3px;border: 0;}
+hr.black {border-bottom:2px dotted #414042;}
+hr.white {border-bottom:2px dotted #FFF;}
+hr.light-grey {border-bottom:2px dotted #ffffff;}
+
+
+.container {height:100%;overflow:hidden;position:relative;}
+.container svg {display:block;}
+
+/* Carousel Controls */
+div.carousel-controls button#prev {width:58px;height:58px;border:0;background: url('../images/oe-arrows-light.png') 0 0 transparent;text-indent: -9999px;outline:none;}
+div.carousel-controls button#next{width:58px;height:58px;border:0px none;background: url('../images/oe-arrows-light.png') repeat scroll 58px 0px transparent;text-indent:-9999px;margin-left:10px;outline:medium none;}
+div.carousel-controls button#prev:hover {background-position: 0 -59px;}
+div.carousel-controls button#next:hover {background-position: -60px -59px;}
+
+/* Diagonal Box Tops */
+.contact-top {width: 0px;height: 0px;border-bottom: 100px solid #7b6f65;border-right: 1521px solid transparent;z-index: 2;position: relative;margin-top: -100px;}
+.us-top {width:0px;height:0px;border-bottom: 100px solid #fdb714;border-left: 1521px solid transparent;z-index: 2;position: relative;margin-top: -100px;}
+.us-bottom {width:0; height:0;border-top: 100px solid #fdb714; border-left: 1521px solid transparent;z-index: 2;position: relative;margin-top: 0;}
+.projects-top {width:0px;height:0px;border-bottom: 100px solid #7b6f65;border-left: 1521px solid transparent;z-index: 2;position: relative;margin-top: -100px;}
+.team-bottom {width:0px;height:0px;border-top: 100px solid #414042;border-right: 1521px solid transparent;z-index: 2;position: relative;margin-top: 0;}
+.team-top {width:0px;height:0px;border-right: 1521px solid transparent;z-index: 2;position: absolute;border-bottom: 100px solid #414042;margin-top: -100px;}
+.partnership-top {width:0px;height:0px;border-right: 1521px solid transparent;z-index: 2;position: absolute;border-bottom: 100px solid #7ecdc5;margin-top: -100px;}
+
+
+/* Header */
+header {background:#FFF;position:relative;width:100%;padding:1%;}
+header h1#logo {background: url(../images/oe-logo.png) top center no-repeat scroll;background-size: 100%;width: 100px;height: 83px;position: relative;top: 0%;margin: auto;z-index: 20;text-indent: -9999px;}
+div.header-content {background: url('../images/skyline.jpg') top center;height: 50%;position: relative;min-height: 84em;background-size: 100%;}
+div.header-content img#header-logo {position: absolute;left: 5%;bottom: 19%;}
+div.header-content img#strapline {position: absolute;left: 50%;margin-left: -271px;top: 10%;}
+div.header-content h2 {font-size: 45px;position: absolute;left: 50%;margin-left: -265.5px;top: 9%;font-weight: 600;color: rgba(255,255,255,0.8);}
+
+/* Navigation */
+nav.navigation {position: fixed;right: 0;top: 15%;z-index: 5;width: 20%;}
+nav.navigation ul li {list-style-type: none;padding: 0px;background: none repeat scroll 0% 0% rgba(255, 255, 255, 0.8);color: #414042;margin: 20px 0px 10px;text-indent: 10px;}
+nav.navigation ul li:hover {background: rgba(255,255,255,1);}
+nav.navigation ul li a {font-size: 13pt;color: rgb(65,64,66);text-transform: uppercase;display: block;height: 58px;line-height: 58px;outline:none;text-decoration:none;}
+nav.navigation ul li a:hover {background: rgba(255,255,255,1);text-decoration: none;}
+nav.navigation ul li span {position: absolute;right: 6%;}
+
+/* Sections */
+section {position: relative;height: 100%;width: 100%;}
+section div.content {width: 83%;padding: 2% 5% 2% 5%;position: relative;}
+section .main-cont {min-height:80em;}
+
+section div.contact-main.main-cont {min-height: 73em;}
+section div.projects-main.main-cont, section div.philosophy-main.main-cont {min-height: 90em;min-height: 79em;padding-bottom: 10%;overflow: auto;}
+section div.contact-content {width: 83%;padding: 2% 5% 2% 5%;position: relative;}
+section div.content h2 {font-size: 30pt;text-align: left;width: 100%;margin-bottom: 50px;text-transform: uppercase;}
+section div.content h2.right {text-align: right;}
+section div.content p {font-size: 21pt;padding: 0;margin: 0;padding-bottom: 20px;}
+section div.content p.small {font-size: 15pt;}
+section#home div.content p {width: 100%;margin-top: 40px;}
+section#home div.content p.small {font-size: 15pt;}
+section#team {background: #414042;}
+section#philosophy div.content h2,
+section#contact div.content h2 {color: #414042;}
+
+.dark-grey {color: #414042;}
+.light-grey {color: #cac5c1;}
+
+/* Home */
+section#home div.home-main {background: #fdb714;min-height: 0;overflow: auto;padding-bottom: 8%;}
+section#home span.home-content {float: left;width: 100%;}
+section#home span.news-items {width: 30%;position: absolute;margin: 5% 0px 0px;right: 6%;}
+section#home span.news-items ul {list-style-type: none;padding: 0px;}
+section#home span.news-items ul li a {color:#FFFFFF;font-size:20pt;height:60px;display:block;border-bottom:2px solid rgba(255, 255, 255, 0.8);line-height: 60px;position: relative;margin-bottom:40px;}
+section#home span.news-items ul li span {font-size: 30pt;color: #fdb714;width: 60px;position: absolute;right: 0px;text-align: center;background-image: url('../images/oe-chevron.png');text-indent: -9999px;}
+section#home div.core-values ul {width:100%; float:left;}
+section#home div.core-values ul li {width: 15.9%; display:inline-block;}
+section#home div.core-values ul li img.small {width:100%;max-width: 174px;cursor: pointer;}
+section#home div.core-values img.blurb {float: right;}
+section#home div.blurb {width: 64%;float: left;margin-top: 20px;}
+section#home div.quote {width: 30%;float: right;margin-top: 20px;}
+section#home div.quote p {font-size: 25pt;text-align: right;text-transform: uppercase;font-weight: bold;border-bottom: 2px dotted #fff;padding-bottom: 60px;}
+section#home div.core-values {float:left;margin-top:-60px;}
+section#home div.core-values img {margin-bottom:20px;}
+
+/* Projects */
+section#projects div.projects-main {background: #7b6f65;padding-bottom: 3%;}
+section#projects img {float:left;width: 100%;height: auto;}
+section#projects img.info-projects {float: right;height: auto;width: auto;padding: 2%;padding-right: 6%;}
+section#projects span {float: left;width: 100%;margin: 0;padding: 0;}
+section#projects span p,
+section#projects span ul {font-size: 15pt;margin:0;padding: 0%;width: 100%;color: #414042; margin-bottom:10px;float: left;}
+section#projects span ul {padding: 80px 0 40px 0;}
+section#projects span ul li {padding-bottom: 8px;}
+section#projects strong {font-size: 25pt;text-transform: uppercase;margin-left: 2%;}
+section#projects #projectsCarousel {float: left;width: 100%;margin-top: 20px;}
+section#projects div.carousel-controls {margin-top: 0px;position: absolute;z-index: 5;right: 2%;}
+section#projects div.item-content {float: left;width: 60%;margin: 0;padding: 0%;color: #ffffff;margin-bottom: 10px;padding-left: 2%;}
+section#projects div.item-image {float: left;width: 40%;}
+section#projects div.item-content p {font-size:19pt;margin-top:1%;}
+section#projects div.item-content p a {font-weight:bold;color: #ffffff;}
+section#projects div.carousel-info img {width: 210px;max-width: 100%;margin-left: 155px;float: left;margin-top: -10px;z-index: 9999;position: absolute;}
+section#projects div.key-features span ul li {float:left;width: 19%;margin-right: 1%;}
+section#projects div.key-features span ul li:last-child {margin: 0;}
+section#projects div.key-features span ul li img {width:100%;}
+section#projects div.item.first div.blurb {width: 62%;float: left;margin-top: 20px;}
+section#projects div.item.first div.quote {width: 30%;float: right;margin-top: 20px;}
+section#projects div.item.first div.quote p {font-size: 28pt;;text-align: right;text-transform: uppercase;font-weight: bold;border-bottom: 2px dotted #fff;padding-bottom: 60px;}
+section#projects div.item.first div.core-values {float:left;margin-top:-60px;}
+section#projects div.item.first div.core-values img {margin-bottom:20px;}
+section#projects div.item.first div.item-content {float: left;width: 100%;margin: 0;padding: 0%;color: #ffffff;margin-bottom: 0;padding-left: 0;}
+section#projects div#projectsCarousel div.item-content {height: 61%;float: left;width: 58%;margin: 0;padding: 0%;color: #ffffff;margin-bottom: 0;padding-left: 0;margin-left: 2%;margin-top: 2%;}
+section#projects div#projectsCarousel {	padding:2%;	background:rgba(255,255,255,0.4);margin-top: 4%;height: 396px;}
+section#projects div#projectsCarousel strong {margin-top: 10px;float: left;}
+
+/* Partnership */
+section#partnership div.partnership-main {background-color: #7ecdc5;}
+section#partnership a {color: #7b6f65;}
+section#partnership a:hover {text-decoration: underline;}
+section#partnership p {width: 95%;}
+
+/* Philosophy */
+section#philosophy {margin-top: -100px;}
+section#philosophy div.philosophy-main {background: #7ecdc5;background-size: 100%;}
+section#philosophy div.content {padding-top: 10%;min-height: 0;overflow: hidden;height: 100%;padding-bottom: 10%;}
+section#philosophy span p {font-size: 20pt;margin: 0;color:#414042;}
+section#philosophy div.blurb {width: 70%;float: left;margin-top: 40px;}
+section#philosophy div.quote {width: 30%;float: right;margin-top:40px;}
+section#philosophy div.quote p {font-size: 25pt;text-align: right;text-transform: uppercase;font-weight: bold;border-bottom: 2px dotted #414042;padding-bottom: 60px;color:#414042;padding-left: 15%;}
+
+/* Investors */
+section#investors {margin-top: -100px;}
+section#investors div.investors-main {background: #7ecdc5;background-size: 110%;background-position: bottom center;}
+section#investors div.content {padding-top: 10%;min-height: 0;overflow: hidden;height: 100%;padding-bottom: 10%;}
+section#investors span p {font-size: 20pt;margin: 0;color:#414042;}
+section#investors div.blurb {width: 64%;float: left;margin-top:40px;}
+section#investors div.quote {width: 30%;float: right;margin-top:40px;}
+section#investors div.quote p {font-size: 25pt;text-align: right;text-transform: uppercase;font-weight: bold;border-bottom: 2px dotted #fff;padding-bottom: 60px;}
+section#investors span.logos {width: 100%;float: left;margin-top: 5%;padding: 25px;background-color: rgba(255,255,255,0.6);}
+section#investors span.logos img {float: left;width: 100%;max-width: 100%;height: auto;}
+section#investors span.logos ul {list-style-type: none;padding:0;margin:0; margin-left:10px;}
+section#investors span.logos ul li{margin-right:44px;float: left;}
+section#investors span.logos ul li:last-child {margin-right:0;}
+section#investors div#logos-mobile { display:none; }
+
+/* Team */
+section#team img {float: left;max-width: 100%;height: auto;cursor:pointer;}
+section#team strong {font-size: 15pt;text-transform: uppercase;margin-top: 20px;float: left;width: 100%;}
+section#team small {font-size: 12pt;}
+section#team div#teamCarousel {margin-top:50px;float: left;}
+section#team div#teamCarousel ul {padding: 0;margin: 0;}
+section#team div#teamCarousel ul li {list-style-type: none;padding:0;margin:0;float:left;margin-right: 1.5%;width: 15.4%;}
+section#team div#teamCarousel ul li:last-child {list-style-type: none;padding:0;margin:0;float:left;margin-right:0;}
+section#team div.team-main.main-cont {min-height: 0;min-height: 60em;margin-bottom: 10%;overflow: auto;}
+section#team div#teamMoreInfo div.team-member-left {float:left;width:25%;}
+section#team div#teamMoreInfo div.team-member-left img { width:350px;}
+section#team div#teamMoreInfo div.team-member-right {float:left;margin-left:20px;width:70%;}
+section#team div#teamMoreInfo div.team-member {width:100%;float:left;}
+section#team div#teamMoreInfo div.team-member-right strong {font-size: 22pt;margin: 0;}
+section#team div#teamMoreInfo div.team-member-right p {font-size:19pt;margin: 0;line-height:40px;}
+section#team div#teamMoreInfo small {font-size:15pt;}
+section#team div#teamMoreInfo {float: left;}
+section#team .team-text {right: 0;margin-top: -152px;margin-right: 172px;z-index: 9999;position: absolute;cursor: auto;width: 385px!important;}
+
+/* Contact Section */
+section#contact div.contact {font-size: 16pt;color: #ffffff;float: left;margin-top: 40px;width: 30%;}
+section#contact div.contact a {color: #ffffff;}
+section#contact div.contact address {font-weight: bold;}
+section#contact div.contact.contact-right {float: right;width: 68%;}
+section#contact div.contact-main {background: #7b6f65;min-height: 0;overflow: hidden;height: 100%;padding-bottom: 6%;}
+section#contact div.contact strong {font-size:18pt;}
+section#contact div.contact span strong {font-size:16pt;}
+section#contact h2 {color: #ffffff;text-transform: uppercase;font-size: 30pt;text-align: left;width: 100%;margin-bottom: 50px;text-transform: uppercase;}
+section#contact img {width: 100%;max-width: 1000px;}
+section#contact span.partnership-logo img{width: auto;max-width: auto; margin-top: 40px;}
+section#contact div.map {cursor:pointer; float: left;width: 100%;height: 100%;overflow: auto;background: url(../../web/images/map-large.png);background-position: center center;min-height: 484px;background-size: 100%;}
+
+/* Footer */
+footer {padding: 2% 4% 2% 4%;overflow:auto; background-color:#414042;}
+footer span.footer-nav,
+footer span.footer-img {float:left;margin-right:2%;}
+footer span.footer-img img{width: 88%;}
+footer span.footer-nav {margin-top: 31px;}
+footer span.footer-nav ul {list-style-type: none;padding:0;margin:0;}
+footer span.footer-nav ul li {float:left;}
+footer span.footer-nav ul li a {text-transform: uppercase;color: #fdb515;font-size: 13pt;margin-right: 20px;padding-right: 20px;border-right: 2px solid #fdb515;}
+footer span.footer-nav ul li:last-child a {border:0;}
+footer span.footer-nav ul li a:hover {text-decoration: underline;}
+footer span.footer-social {float: right;margin-top: 7px;}
+footer span.footer-social img {margin-left:10px;width: 60px;}
+footer span.footer-nav-mobile {display:none;}
+
+/* Media Styles */
+@media screen and (max-width:1400px) {
+	
+	.nav>li {margin: 10px 0px 10px;}
+
+	section .main-cont {min-height: 59em;}
+	section#philosophy div.quote p,
+	section#investors div.quote p {font-size: 22pt;}
+	section div.content p {font-size: 16pt;}
+	section div.content p.small {font-size: 13pt;}
+	section div.projects-main.main-cont, section div.philosophy-main.main-cont {min-height: 79em;overflow: auto;padding-bottom: 10%;}
+	section div.content h2 {font-size: 26pt;}
+	section#team div.team-main.main-cont {min-height: 62em;}
+	section#contact div.contact, section#contact div.contact span strong  {font-size: 12pt;}
+	
+	section#projects strong {font-size: 15pt;}
+	section#projects div.item-content {width: 60%;}
+	section#projects div.item-content p {font-size: 16pt;line-height: 28px;}
+	section#contact div.contact strong {font-size: 15pt;}
+	section div.contact-main.main-cont {min-height: 60em;}
+	
+	section#investors div.investors-main {background-size: 161%;}	
+	footer span.footer-nav ul li a {font-size: 11pt;}
+	
+	section#contact div.map {min-height: 407px;}
+	
+	section#team small {font-size: 10pt;}
+	section#team strong {font-size: 12pt;}
+	
+	div.header-content {	background-size: 117%;	}
+	section#home div.quote p,
+	section#projects div.item.first div.quote p {font-size: 19pt;line-height: 34px;}
+	section#team div#teamMoreInfo div.team-member-right p {margin: 0;font-size: 16pt;line-height: 32px;}
+	
+	section#team .team-text {margin-top: -121px;width: 315px!important;}
+	section#projects div.carousel-controls {margin-top: 0;right: 14px;z-index: 5;}
+	div.carousel-controls button#prev {width: 40px;height: 40px;background-size: 200%;}
+	div.carousel-controls button#next {width: 40px;height: 40px;background-size: 200%;background-position:40px 0px;}
+	div.carousel-controls button#prev:hover {background-position: 0 -40px;}
+	div.carousel-controls button#next:hover {background-position: -40px -40px;}
+}
+
+
+/* Tablet */
+@media screen and (max-width:1024px) {
+
+	
+    /* Adjust Font Sizes */
+    section div.content p,
+    section#team span p,
+    section#projects p,
+    section#investors span p { font-size: 16pt; }
+    section#investors div.quote p {font-size: 18pt;}
+    section#philosophy div.quote p {font-size: 18pt;}
+	section#home div.content p.small {font-size: 14pt;}
+    
+    section#investors span.logos img {width: 100%;}
+    div.philosophy-main {background-size: 149%;}
+    div.team-main.main-cont {min-height: 68em;}
+
+    section#philosophy span p {font-size: 17pt;margin-top: 2%;color: #414042;}
+    section#investors span.logos img {margin-right: 0;max-width: 100%;height: auto;}
+    section#projects span p {font-size: 13pt;}
+    section#investors div.investors-main {background-size: 172%;}
+	section#contact h2, section div.content h2 { font-size:22pt;}
+	
+	.us-top {border-bottom: 25px solid #fdb714;margin-top: -25px;}
+	.contact-top {border-bottom: 25px solid #7b6f65;margin-top: -25px;}
+	.projects-top {border-bottom: 25px solid #7b6f65;margin-top: -25px;}
+	.us-bottom {border-top: 25px solid #fdb714;}
+	.team-top {border-bottom: 25px solid #414042;margin-top: -25px;}
+	.partnership-top {border-bottom: 25px solid #7ecdc5;margin-top: -25px;}
+	.team-bottom {border-top: 25px solid #414042;margin-top: 0;}
+	section#investors, section#philosophy {margin-top: -25px;}
+
+	.nav>li {background-size: 155%;height: 46px!Important;}
+	.navbar-inverse .navbar-nav>li>a{line-height: 46px;font-size: 12pt;}
+	div.header-content {min-height:66em;}
+	div.header-content h2 {margin-left: -199.5px;font-size: 34px;}
+	section#contact div.contact, section#contact div.contact span strong {font-size: 10pt;}
+	footer span.footer-img img {width: 55%;}
+	footer span.footer-nav {margin-top: 17px;}
+	section#contact div.map {min-height: 300px!important;background-size: 115%;}
+	footer span.footer-nav ul li a {font-size: 10pt;}
+	section#contact span.partnership-logo img {width: auto;max-width: auto;margin-top: 40px;width: 150px;}
+	
+	section#projects div.carousel-controls {margin-top: 0;right: 14px;z-index: 5;}
+	div.carousel-controls button#prev {width: 40px;height: 40px;background-size: 200%;}
+	div.carousel-controls button#next {width: 40px;height: 40px;background-size: 200%;background-position:40px 0px;}
+	div.carousel-controls button#prev:hover {background-position: 0 -40px;}
+	div.carousel-controls button#next:hover {background-position: -40px -40px;}
+	
+	section#team div#teamMoreInfo div.team-member-right p {font-size: 12pt;margin: 0;line-height: 26px;}
+	section#home div.core-values img.blurb {width: 310px;}
+	section#projects div.carousel-info img {width: 160px;max-width: 100%;margin-left: 110px;float: left;margin-top: -10px;z-index: 9999;position: absolute;}
+	section#home div.quote p,section#projects div.item.first div.quote p {font-size: 15pt;}
+	section#team .team-text {right: 0;margin-top: -122px;margin-right: 107px;z-index: 9999;position: absolute;cursor: auto;width: 265px;}
+}
+
+
+@media screen and (min-width:1920px) and (max-width:1920px) and (min-height:1080px) and (max-height:1080px) {
+	div.header-content {min-height: 96em;}
+}
+
+@media screen and (min-width:1366px) and (max-width:1366px) and (min-height:768px) and (max-height:768px) {
+	div.header-content {min-height: 65em;}
+}
+
+@media screen and (min-width:640px) and (max-width:1000px) {
+	section#investors div.investors-main { background-size: 404%;background-position: bottom right;}
+	section#philosophy div.philosophy-main { background-size: 217%;background-position: bottom center;}
+	
+	section#contact div.contact, section#contact div.contact span strong {font-size: 10pt;}
+
+	section div.content p {font-size: 11pt;}
+	section#philosophy div.quote p, section#investors div.quote p {font-size: 14pt;}
+	section div.content p.small {font-size: 10pt;}
+	footer span.footer-nav ul li a {font-size: 9pt;margin-right: 10px;padding-right: 10px;}
+	.navbar-inverse .navbar-nav>li>a {color: #414042;text-transform: uppercase;font-size: 13pt;}
+	section#home div.content p.small {font-size: 12pt;}
+}
+
+@media screen and (min-width:1000px) and (max-width:1400px) {
+	section#investors div.investors-main { background-size: 200%;background-position: bottom right;}
+	section#philosophy div.philosophy-main { background-size: 160%;background-position: bottom center; }
+}
+
+@media screen and (min-width:1400px) {
+	section#investors div.investors-main { background-size: 180%;}
+}
+
+
+/* iPhone */
+@media screen and (max-width:640px) {
+	
+	header {height: auto;}
+	div.main {padding:0;}
+    hr {height: 3px;border: 0;width: 95%;}
+	
+	span.logos { display:none;}
+	span.logos-mobile { display:block!important;}
+
+	
+	section div.content p {font-size:10pt;}
+	
+	.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {padding-top:0;}
+
+	div#values div.value {width: 80%;position: absolute;left: 50%;top: 50%;}
+
+    /* Hidden Items */
+    span.news-items,
+    span.footer-nav,
+    nav,
+    .nav>li span,
+    header h1#logo {display:none;}
+
+    section#home div.home-main {background: #fdb714;min-height: 0;overflow: auto;height: 100%;padding-bottom: 0;}
+	section#contact img {width: 100%;max-width: 1000px;}
+    /* Header Mobile */
+    div.header-content h2 {font-size: 17pt;position: absolute;left: 50%;margin-left: -138.5px;top: 28%;}
+    div.header-content {background: url('../images/skyline-mobile.jpg') top center;height: 50%;position: relative;min-height: 40em;background-position: -350px 39px;}
+    div.header-content img {position: absolute;left: 5%;bottom: 10%;width:50%;max-width: 100%;height: auto;}
+
+    /* Sections */
+    section div.content {width: 100%;padding: 2%;position: relative;min-height: 56em;height: 0;}
+    section#home span.home-content {position: absolute;width: 98%;}
+    section#home div.content p, 
+    section#philosophy div.content p,
+    section#projects p,
+    section#team span p {width: 100%;padding: 5%;padding: 0 2% 0 2%;font-size:10pt;}
+	section#home div.content p {margin-bottom: 20px;margin-top:0;}
+	section#home div.content p.small {font-size: 10pt;}
+	
+	section#projects div.item-content p {font-size: 10pt;margin-top: 1%;line-height: 18px;padding: 0 2% 0 2%;}
+
+    /* Diagonal Mobile*/
+    section .team-top,
+    section .projects-top,
+    section .us-top {border-bottom: 25px solid #fdb714;}
+	
+	section .projects-top {border-bottom: 25px solid #7b6f65;}
+
+    section .us-bottom {border-top: 25px solid #fdb714; }
+    section .team-bottom {border-top: 25px solid #414042;margin-bottom: 0;}
+    section .projects-top, 
+    section .us-top {margin-top: -25px;}
+    section .us-bottom {margin-top: -50px;position:absolute;}
+    
+    section div.content h2,
+    section#contact h2 {font-size: 20pt;margin: 0;margin-bottom: 20px;width: 100%;padding: 0 2% 0 2%;}
+		
+	section div.contact-main.main-cont {min-height: 58em;}
+	section#contact div.contact.contact-right {width: 100%;}
+
+	section#projects div.carousel-controls {margin-top: 0;right: 0;z-index: 37;width: 100%;top: 115px;}
+	div.carousel-controls button#prev {width: 40px;height: 40px;background-size: 200%;left: 0;position: absolute;}
+	div.carousel-controls button#next {width: 40px;height: 40px;background-size: 200%;background-position: 40px 0px;right: 0;position: absolute;}
+	div.carousel-controls button#prev:hover {background-position: 0 -40px;}
+	div.carousel-controls button#next:hover {background-position: -40px -40px;}
+	
+	div.home-main.main-cont {min-height: 0;overflow: auto;height: 100%;padding-bottom: 40px;}
+	
+	section#home div.core-values img.blurb {width:80%;}
+	section#home div.core-values {float: left;margin-top: -20px;}
+
+    /* Philosophy Mobile */
+    section#philosophy {background: #414042;}
+    section#philosophy div.content h2 {color:#FFF;}
+    section#philosophy div.philosophy-main {background-image: none;background-color: #414042;}
+    section#philosophy p {color:#FFF;}
+    section#philosophy div.content {padding-top: 15%;}
+    section#philosophy div.blurb {width: 100%;margin-top: 10px;}
+    section#philosophy div.quote {width: 100%;float:left;margin:0;font-size:15pt;}
+    section#philosophy div.content p {color:#FFF;text-align:left;}
+    section#philosophy hr {border-bottom: 2px dotted #FFF;}
+    section#philosophy div.philosophy-main.main-cont {min-height: 0;overflow: auto;height: 100%;padding-bottom: 40px;}
+
+    /* Team Mobile */
+    section#team span {float: left;width: 96%;}
+    section#team .team-top {border-bottom: 25px solid #414042;margin-top: -25px;}
+    section#team img {width: 100%;padding: 2%;}
+    section#team span p {padding:0;}
+    section#team span {float: left;width: 100%;padding: 2%;}
+    section#team span small {font-size: 10pt;margin: 0;}
+    section#team span strong {font-size: 15pt;text-transform: uppercase;margin: 0;}
+    section#team span p {font-size: 8pt;margin: 0;padding: 0;width: 100%;float: none;}
+	section#team div ul li {margin: 0;float: none;margin-right: 0;width: 100%;}
+	section#team div.team-main.main-cont {height: 100%;min-height: 295em;}
+	section#team div#teamCarousel {margin-top: 30px;display:none;}
+	section#team div#teamMoreInfo ul li {display:block!important;}
+	section#team strong {margin: 0;margin-left: 2%;}
+
+    /* Projects Mobile */
+    section#projects span {width: 100%;padding: 2%;}
+    section#projects span p {font-size: 10pt;margin: 0;padding: 0;width: 100%;float: left;}
+    section#projects span ul {font-size: 10pt;margin: 0;padding: 0;width: 100%;float: none;}
+	section#projects div.key-features span ul {float:left; margin-top:20px;margin-bottom:30px;}
+    section#projects strong {font-size: 15pt;text-transform: uppercase;margin: 0;}
+    section#projects img {padding-top: 4%;float: right;margin: 0;padding: 0;max-width: 100%;height: auto;width:100%;}
+    section#projects div.content {height: 55em;padding-top: 30px;}
+    section#projects div.projects-main.main-cont {height: 100%;overflow: auto;padding-bottom: 40px;min-height: 0;}
+	section#projects div#projectsCarousel div.item-content { width:100%; padding:0; margin:0;}
+	section#projects div#projectsCarousel, section#projects div#projectsCarousel div.item-content { height:auto!important; }
+	section#projects div#projectsCarousel {width: 96%;margin-left: 2%;}
+	
+	section#projects div.key-features span ul li {float: left;width: 100%;margin-right: 1%;}
+	section#projects div.key-features img {padding: 2%;padding-bottom: 0;}
+	section#projects #projectsCarousel {margin:0;}
+	section#projects div.item-image {width: 100%; padding:2%;}
+	section#projects div.item-content {width: 100%;padding-left: 2%;padding-right: 2%;}
+
+    /* Investors Mobile */
+    section#investors div.investors-main {background: #7ecdc5;}
+    section#investors span p {font-size: 10pt;}
+    section#investors div.blurb {width: 100%;float: left;padding: 0 2% 0 2%;margin:0;}
+    section#investors div.quote {width: 100%;float: left;padding: 0 2% 0 2%;margin:0;}
+    section#investors div.quote p {font-size: 15pt;text-align: left;padding-bottom: 10px;border:0;}
+    section#investors div.investors-main.main-cont {min-height: 0;overflow: auto;height: 100%;padding-bottom: 85px;}
+    section#investors div.content {padding-top: 15%;min-height: 0;}
+	
+	section#investors div#logos-mobile { padding: 0 1% 0 1%; padding-top:20px;float:left;display:block; }
+	section#investors div#logosCarousel {background-color: rgba(255,255,255,0.6);padding: 0 4% 0 4%;float: left;width: 220px;}
+	section#investors div#logosCarousel .carousel-inner>.item { height:100px;margin-top: 0px; }
+	section#investors .carousel-controls { float:left;}
+	section#investors div.carousel-controls button#prev {width:40px;height:100px;border:0;background: url('../images/oe-arrows-light-logos.png') 0 0 transparent;text-indent: -9999px;outline:none;}
+	section#investors div.carousel-controls button#next{width:40px;height:100px;border:0px none;background: url('../images/oe-arrows-light-logos.png') repeat scroll 80px 0px transparent;text-indent:-9999px;margin-left:0px;outline:medium none;}
+
+	
+	section#investors span.logos {padding:2%;}
+	section#investors span.logos img {margin:0; width: 56px;}
+	section#investors span.logos ul li {margin-right: 0;float: left; width:100%;}
+	
+	div#logos-mobile img#hta {padding:16px 0  0 68px;}
+	div#logos-mobile img#hb {padding: 32px 0 0 0; }
+	div#logos-mobile img#ryden {padding:16px 0 0 27px; }
+	div#logos-mobile img#rourke {padding-top:20px; }
+	div#logos-mobile img#mayer-brown {padding:15px 0 0 44px;}
+	div#logos-mobile img#thrive {padding:16px 0 0 62px;}
+	div#logos-mobile img#harris {padding:16px 0 0 30px; }
+
+    /* Contact Mobile */
+    section#contact div.contact {width: 100%;font-size: 16pt;float: left;margin-top: 2%;margin-bottom: 10%;}
+    section#contact div.contact {font-size: 12pt;padding: 0 2% 0 2%;}
+	section#contact div.contact hr { border-bottom: 2px dotted #ffffff;}
+    section#contact div.contact strong {font-size: 12pt;}
+    section div.contact-content {width: 100%;padding: 0;position: relative;height: 36em;padding: 2%;}
+    section#contact h2 {text-transform: uppercase;padding-top: 30px;}
+    section#contact div.contact-main {padding-bottom: 20px;}
+	
+	section#contact div.map {min-height: 350px;background-size: 136%;}
+	
+    /* Footer Mobile */
+    footer {padding: 4%;min-height: 0;height: 100%;overflow: auto;}
+    footer span.footer-nav, 
+    footer span.footer-img img {width: 39px;}
+	footer span.footer-img {float: left;}
+    footer span.footer-social img {margin-left: 10px;width: 23%;}
+    footer span.footer-social {width: 150px;position: absolute;right: 0;margin-top:0;}
+    footer a:active,
+    footer a:visited,
+    footer a:hover,
+    footer a:link {text-decoration: none;}
+	footer span.footer-nav-mobile{display:auto;display: block;}
+	footer span.footer-nav-mobile ul {list-style-type: none;padding:0;margin:0;}
+	footer span.footer-nav-mobile ul li {float:right;}
+
+	footer span.footer-nav-mobile ul li a {text-transform: uppercase;color: #fdb515;font-size: 13pt;border-right: 2px solid #fdb515;line-height: 40px;}
+	footer span.footer-nav-mobile ul li:last-child a {border:0;}
+	footer span.footer-nav-mobile ul li a:hover {text-decoration: underline;}
+	
+	section#team div#teamMoreInfo div.team-member-left {float: left;width: 100%;}
+	section#team div#teamMoreInfo div.team-member-right {float: left;margin-left: 5px;width: 98%;}
+	section#team div#teamMoreInfo div.team-member-right p {font-size: 10pt;margin: 0;line-height: 20px;}
+	section#team div#teamMoreInfo div.team-member-right strong {font-size: 18pt;margin: 0;}
+	section#team div#teamMoreInfo small {font-size: 13pt;}
+	
+	section#home div.blurb {width: 100%;}
+	section#home div.content p {margin-bottom: 20px;margin-top: 0;text-align: left;font-size: 10pt;}
+	section#home div.quote {width: 98%;float: left;margin-top: 0;text-align: left;}
+	section#home div.home-main {padding-bottom: 15%;}
+	section#home div.core-values img.blurb {display:none;}
+	section#home div.core-values ul li {width:98%;display: inline-block;}
+	section#home div.core-values ul li img.small {max-width: inherit;cursor: pointer;margin: 20px 38px;width: 225px;}
+	section#home div.content div.quote p {font-size: 24px;padding-bottom: 24px;}
+	
+	section#projects div.item.first div.blurb {width: 98%;float: left;margin-top: 10px;}
+	section#projects div.item.first div.quote {width: 98%;float: right;margin-top: 0;}
+	section#projects div.item.first div.quote p {font-size: 15pt;text-align:left;padding-bottom: 20px;padding-left: 0;}
+	section#projects div#projectsCarousel strong {padding-left: 4px;}
+	section#projects div.item-content p {font-size: 10pt;margin-top: 1%;line-height: 18px;padding: 0 2% 0 2%;padding-bottom: 20px;}
+	section#projects div.carousel-info img, section#team .team-text, section#projects img.info-projects {display:none;}
+	
+	section#partnership p {width: 95%;padding: 0 2% 0 2%;}
+	section#partnership div.content { min-height: 0; }
+	section#partnership .main-cont {min-height: 48em;padding-top: 15px;}
+	
+	section#contact span.partnership-logo img {width: 142px;}
+}
+
+
+@media screen and (min-width:641px) {
+    
+    /* Hidden Items */
+    #mobile-logo {display:none;}
+    
+    /* Navbar */
+    .navbar>li {clear:both;}
+    .navbar-inverse {position: fixed;right: 0;top: 15%;z-index: 9999;width: 20%;left: auto;background:none;max-width: 400px;}
+    .navbar-inverse .navbar-nav>li>a {color: #414042;}
+    .navbar-inverse .navbar-nav>li>a:hover,.navbar-inverse .navbar-nav>li>a:focus{color:#414042;}
+    .navbar-nav {float: none;margin: 0;}
+    .container>.navbar-header {display:none;}
+    
+    /* Nav */    
+    .nav>li {list-style-type: none;padding: 0px;color: #414042;margin: 10px 0px 20px;text-indent: 10px;clear: both;width: 100%;height: 59px;background-image: url('../images/oe-chevron-large.png');background-position: top right;background-repeat: no-repeat;}
+    .nav>li:hover {background-position: bottom right;}
+    .nav>li a {font-size: 13pt;color: rgb(65,64,66);text-transform: uppercase;display: block;height: 58px;line-height: 58px;outline:none;text-decoration:none;padding:0;}
+    /*.nav>li:hover {background: rgba(255,255,255,1);}*/
+    .nav>li span {position: absolute;right: 6%;}
+
+    header .container {padding: 0;margin: 0;}
+	
+	
+	section#contact div.map {min-height: 533px;}
+
+}
+
+/* iPad Landscape */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) { 
+	
+	.nav>li {margin: 10px 0px 10px;}
+	
+	div.header-content{ min-height: 65em;}
+
+    .navbar-inverse {top: 10%!important;}
+    /* Adjustments for portrait */
+    div.home-main.main-cont {min-height: 56em;}
+    section#home span.news-items ul li a {font-size: 15pt;}
+	
+	div.header-content {min-height: 65em;}
+	
+	section div.content p, 
+	section#team span p, 
+	section#projects p, 
+	section#contact div.contact {font-size: 12pt;margin-top: 0!important;}
+	
+	section#projects div.carousel-info img {width: 185px;margin-left: 13%;float: left;margin-top: -63px;z-index: 9999;position: absolute;-ms-transform: rotate(-18deg);-webkit-transform: rotate(-18deg);transform: rotate(-18deg);}
+
+    
+    /* Philosophy */
+    section#philosophy div.content {padding-top: 10%;}
+    section#philosophy div.philosophy-main {background-size: 154%;background-position: top right;}
+    
+    /* Investors */
+    section#investors div.content {padding-top: 5%;padding-bottom: 0;}
+    section#investors div.investors-main {background-size: 185%;background-position: top right;}
+    
+    /* Contact */
+    section#contact div.contact strong {font-size: 13pt;}
+	section#contact img {width:100%;}
+	footer span.footer-nav ul li a {font-size: 8pt;}
+	section#team div ul li {margin-right: 18px;}
+	section#contact div.contact.contact-right {float: right;width: 63%;}
+	section#contact div.contact-main.main-cont {min-height: 60em;}
+	
+	header {height: 10%;}
+    header h1#logo {background: url(../images/oe-logo.png) top center no-repeat scroll;}
+	section#home div.quote p {font-size: 15pt;}
+	section .main-cont {min-height: 0;padding-bottom: 10%;padding-top: 4%;}
+	section#projects div.key-features span ul li {margin-right: 9px;}
+	section div.projects-main.main-cont {min-height: 75em;}
+	section div.philosophy-main.main-cont {min-height: 0;}
+	section#investors div.quote p {font-size: 14pt;}
+	.navbar-inverse .navbar-nav>li>a {font-size: 13pt;}
+	section#team div.team-main.main-cont {min-height: 55em;}
+	
+	section div.content h2 {font-size: 22pt;margin-bottom: 20px;}
+	section#philosophy div.blurb,
+	section#philosophy div.quote,
+	section#investors div.blurb, 
+	section#investors div.quote {margin-top: 0px;}
+	section#philosophy div.quote p,
+	section#investors div.quote p {font-size: 17pt;padding-bottom: 20px;}
+	
+	footer span.footer-social img {margin-left: 10px;width: 45px;margin-top: 14px;}
+	
+	section#projects div.item.first div.quote p {font-size: 15pt;}
+	section#projects div.item-content p {font-size: 12pt;line-height: 22px;}
+	
+}
+
+/* iPad Portrait */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+	
+	div.header-content {
+		background-size: 129%;
+	}
+
+    /* Adjustments for portrait */
+    div.header-content h2 {font-size: 35px;margin-left: -209.5px;top: 6%;}
+    section#philosophy span p {font-size: 14pt;}
+    section#home span.news-items ul li a {font-size: 15pt;}
+    .navbar-inverse .navbar-nav>li>a {font-size: 10pt;}
+    div.home-main.main-cont {min-height: 63em;}
+    
+	/* Philosophy */
+	section#philosophy div.quote p {font-size: 16pt;}
+	section#philosophy div.philosophy-main {background-size: 212%;}
+	section#philosophy div.content {padding-top: 14%;}
+	section#philosophy div.philosophy-main.main-cont {min-height: 0;padding-bottom: 10%;}
+
+	/* Projects */
+	section#projects span p {font-size: 11pt;}
+	section#projects strong {font-size: 16pt;}
+
+	/* Team */
+	section#team div.content p, section#team span p {font-size: 11pt;}
+	section#team span strong {font-size: 16pt;}
+
+	/* Investors */
+	section#investors span p {font-size: 13pt;}
+	section#investors div.quote p {font-size: 16pt;}
+	section#investors div.content {padding-top: 16%;}
+	section#investors .investors-main.main-cont {min-height: 0;padding-bottom: 10%;}
+	section#investors div.investors-main {background-size: 214%;background-position: top right;}
+	
+
+	/* Contact */
+	section#contact div.contact strong {font-size: 13pt;}
+	
+	
+    .nav>li {background-size: 205%;height: 46px!Important;}
+	
+	section#contact span.partnership-logo img {width: auto;max-width: auto;margin-top: 20px;width: 82%;}
+	section#contact div.contact, section#contact div.contact span strong {font-size: 8pt;}
+	section#team div.team-main.main-cont {min-height: 0;overflow: auto;}
+	section#projects div.projects-main {min-height: 0;overflow: auto;}
+	section#investors div.content { padding-top: 8%; }
+	section#projects div.item-content p {font-size: 12pt;line-height: 22px;}
+	
+	section#home div.quote p, section#projects div.item.first div.quote p {font-size: 11pt;line-height: 23px;}
+	section .main-cont {min-height: 48em;}
+}
+
+/* ScrollBar CSS */
+.mCS-dark-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {background-color: #7b6f65;background-color: rgba(123,111,101,0.8);-webkit-border-radius: 2px;-moz-border-radius: 2px;border-radius: 2px;width: 16px;}
+.mCS-dark-thick.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {background-color: #7b6f65;background-color: rgba(123,111,101,1);}
+.mCS-light-thick.mCSB_scrollTools .mCSB_draggerRail, .mCS-dark-thick.mCSB_scrollTools .mCSB_draggerRail {width: 16px;background-color: #fff;background-color: rgba(255,255,255,0.1);-webkit-border-radius: 2px;-moz-border-radius: 2px;border-radius: 2px;}
+.mCS-dark-thick.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+.mCS-dark-thick.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{ background-color: #7b6f65;background-color: rgba(123,111,101,1); }
+

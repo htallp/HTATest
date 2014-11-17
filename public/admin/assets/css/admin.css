@@ -1,0 +1,82 @@
+/*
+Float CMS
+@version      0.1  
+@author       Ross Ewing
+@copyright    HTA Design LLP
+@created      16-Oct-2014
+
+*/
+/* 
+    Created on : 16-Oct-2014, 14:50:27
+    Author     : rre
+*/
+
+body {
+	margin:0;
+	padding:0;
+	font-family: 'Montserrat', sans-serif;
+}
+
+html, body {height:100%;width:100%;overflow:auto;}
+
+a {color:#fff; text-decoration: none;}
+a:hover {text-decoration: underline;}
+
+
+div#admin {height: 70px;background: rgba(55,61,67,0.8);position: fixed;top: 0;left: 0;width: 100%;}
+div#admin div.admin-actions {width:250px;height:70px;line-height:70px;color:#FFFFFF;float:left;}
+
+div#admin div.admin-actions div.menu-button {padding-left:60px; background:url('../img/burger.png') no-repeat left 20px center;font-size: 13pt;}
+div#admin div.admin-actions div.menu-button.open {cursor:pointer;background: url('../img/burger.png') no-repeat left 20px center rgba(55,61,67,1);}
+div#admin div.admin-actions div.menu-button:hover {cursor:pointer;background: url('../img/burger.png') no-repeat left 20px center rgba(55,61,67,1);}
+
+burger.png
+div#admin div.admin-logo img {width:50px;padding:20px 0 0 75px;}
+
+div#admin div.admin-actions div.menu {width:250px;background: rgba(55,61,67,0.8);}
+div#admin div.admin-actions div.menu ul {list-style-type: none;padding: 0;margin: 0;}
+div#admin div.admin-actions div.menu ul li {height: 70px;font-size: 11pt;font-weight: 400;text-transform: uppercase;line-height: 70px;padding-left:60px;}
+
+div#admin div.admin-actions div.menu ul li.page {background:url('../img/file.png') no-repeat left 23px center;}
+div#admin div.admin-actions div.menu ul li.page:hover {background-color: rgba(55,61,67,1);}
+
+div#admin div.admin-actions div.menu ul li a {width:100%;height:70px;float:left;}
+div#admin div.admin-actions div.menu ul li a:hover {text-decoration: none;}
+
+div#admin div.admin-actions div.menu ul li.meta {background:url('../img/meta.png') no-repeat left 23px center;}
+div#admin div.admin-actions div.menu ul li.meta:hover {background-color: rgba(55,61,67,1);}
+
+div#admin div.admin-actions div.menu ul li:hover {background-color: rgba(55,61,67,1);cursor: pointer;}
+
+div.menu-button-save,
+div.menu-button-cancel{float:right;}
+
+div.menu-button-save a {background: #5cb85c;padding: 14px;border-radius: 10px;margin: 20px;height: 30px;line-height: 72px;text-decoration: none;}
+div.menu-button-save a:hover {text-decoration: none;background: #49a949;}
+div.menu-button-save a:active {text-decoration: none;background: #3f913f;}
+
+div.menu-button-cancel a {background: #d9534f;padding: 14px;border-radius: 10px;margin: 0;height: 30px;line-height: 72px;text-decoration: none;}
+div.menu-button-cancel a:hover {text-decoration: none;background: #d43f3a;}
+div.menu-button-cancel a:active {text-decoration: none;background: #3f913f;}
+
+
+
+#iframeSite {width: 100%!Important;}
+
+div#login {position: fixed;top: 35%;left: 50%;width: 350px;height: 270px;margin-left: -175px;margin-top: -125px;background: rgba(55,61,67,0.8);border-radius: 10px;}
+
+div#login div.menu-button-login input {background: #5cb85c;padding: 14px;width: 310px;border-radius: 10px;margin: 0 20px;height: 50px;color:#FFF; cursor: pointer;}
+div#login div.menu-button-login input:hover {text-decoration: none;background: #49a949;}
+div#login div.menu-button-login input:active {text-decoration: none;background: #3f913f;}
+
+div#login input {width: 310px;padding: 14px;border-radius: 10px;border: 0;margin: 0 20px 20px 20px;font-size: 12pt;font-family: 'Montserrat', sans-serif;outline: none;}
+div.overlay {background-color: rgba(255,255,255,0.6);position: fixed;top: 0;width: 100%;height: 100%;}
+div#login span{color: #fff;margin: 20px;text-align: center;width: 310px;float: left;}
+
+div.close {width: 30px;
+position: absolute;
+right: 2%;
+top: 2%;
+opacity: 0.5;
+cursor:pointer;}
+div.close img {width:100%;}
